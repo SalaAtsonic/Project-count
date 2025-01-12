@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#navigationPanel {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    margin-top: 20px; 
+}
+
+.navLink {
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: black;
+}
+
+.navLink:hover {
+    background-color: rgb(234, 229, 86);
+}
+
+.controlPanel {
+    margin: 20px;
+    text-align: center;
+}
+
+.resultBox {
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    margin: auto;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 5px;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.gridBox {
+    background-color: lightgray;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+.gridBox:hover {
+    background-color: rgb(234, 229, 86);
+    cursor: pointer;
+}
