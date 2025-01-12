@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Grid - Sum</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="sum.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <section id="controls" class="controlPanel">
+            <label>How many numbers do you want in the grid?</label>
+            <input id="gridSize" type="text" value="95">
+            <button id="generateGrid">Generate</button>
+        </section>
+        <section id="totals" class="controlPanel">
+            <p>Total Sum:</p>
+            <div id="totalDisplay" class="resultBox"></div>
+        </section>
+        <section id="selectionSum" class="controlPanel">
+            <p>Sum of Selected:</p>
+            <div id="selectionDisplay" class="resultBox"></div>
+            <button id="clearSelection">Clear</button>
+        </section>
+        <section id="gridContainer"></section>
+    </main>
+    <script src="../common.js"></script>
+    <script src="sum.js"></script>
+</body>
+</html>
