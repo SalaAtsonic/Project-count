@@ -1,0 +1,13 @@
+.selected {
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+
+#gridSize {
+    margin-bottom: 20px; 
+}
+
+#clearSelection {
+    margin-top: 20px;
+}
