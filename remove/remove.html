@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers::Remove</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="remove.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div id="controlPanel">
+            <div class="controlItem">
+                <label for="gridSize">How many numbers in the grid?</label>
+                <input id="gridSize" type="text" value="95">
+                <button id="generateGrid">Create</button>
+            </div>
+            <div class="controlItem">
+                <button id="newRandom">New Random Number</button>
+                <input id="randomNumberDisplay" class="boxWithNumbers" readonly>
+            </div>
+            <div class="controlItem">
+                <button id="removeButton">Remove</button>
+                <input id="removeDisplay" class="boxWithNumbers" readonly>
+            </div>
+        </div>
+        <div id="gridContainer"></div>
+    </main>
+    <script src="../common.js"></script>
+    <script src="remove.js"></script>
+</body>
+</html>
