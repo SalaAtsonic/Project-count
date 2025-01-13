@@ -8,7 +8,7 @@ const gridSizeInput = document.getElementById("gridSize");
 let selectedSum = 0;
 let allNumbers = [];
 
-//The grid on page load
+// The grid on page load
 document.addEventListener("DOMContentLoaded", function () {
     const defaultSize = parseInt(gridSizeInput.value) || 95; 
     allNumbers = generateNumbers(defaultSize); 
@@ -27,9 +27,9 @@ generateButton.addEventListener("click", function () {
 
 clearButton.addEventListener("click", function () {
     const items = document.querySelectorAll(".gridBox");
-    items.forEach(function (item) {
-        item.classList.remove("selected");
-    });
+    for (let i = 0; i < items.length; i++) {
+        items[i].classList.remove("selected");
+    }
     selectedSum = 0;
     selectionDisplay.textContent = "-";
 });
@@ -57,16 +57,18 @@ function generateNumbers(count) {
 
 function createGrid(numbers) {
     gridContainer.innerHTML = "";
-    numbers.forEach(function (num) {
+    for (let i = 0; i < numbers.length; i++) {
         const box = document.createElement("div");
         box.classList.add("gridBox");
-        box.textContent = num;
+        box.textContent = numbers[i];
         gridContainer.appendChild(box);
-    });
+    }
 }
 
 function calculateTotal(numbers) {
-    return numbers.reduce(function (sum, num) {
-        return sum + num;
-    }, 0);
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+    return sum;
 }
