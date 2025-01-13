@@ -3,7 +3,7 @@ const generateButton = document.getElementById("generateGrid");
 const clearButton = document.getElementById("clearButton");
 const gridSizeInput = document.getElementById("gridSize");
 
-
+// Generate numbers and create the grid
 function generateAndCreateGrid(size) {
     gridContainer.innerHTML = ""; 
     for (let i = 0; i < size; i++) {
@@ -14,7 +14,7 @@ function generateAndCreateGrid(size) {
     }
 }
 
-
+// Toggle "cleared" state or fill cleared boxes
 function handleGridClick(event) {
     if (event.target.classList.contains("gridBox")) {
         if (event.target.classList.contains("color")) {

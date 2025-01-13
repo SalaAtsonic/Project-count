@@ -1,0 +1,49 @@
+#numbers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 5px; 
+    width: 90%;
+    margin: auto;
+}
+
+.numberInDiv {
+    background-color: #d3d3d3; 
+    border: 1px solid #000; 
+    border-radius: 5px; 
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; 
+}
+
+.boxes {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+    width: 100%; 
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.gridBox:hover {
+    background-color: rgb(234, 229, 86);
+}
+
+.gridBox:active {
+    background-color: rgb(201, 197, 75);
+}
+
+.color {
+    background-color: lightblue;
+}
+
+.color:hover {
+    background-color: rgb(152, 191, 204);
+}
+
+.color:active {
+    background-color: rgb(255, 48, 83);
+}
