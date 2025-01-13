@@ -10,18 +10,18 @@ let allNumbers = [];
 
 // The grid on page load
 document.addEventListener("DOMContentLoaded", function () {
-    const defaultSize = parseInt(gridSizeInput.value) || 95; 
-    allNumbers = generateNumbers(defaultSize); 
-    createGrid(allNumbers); 
+    const defaultSize = (gridSizeInput.value * 1) || 95; 
+    allNumbers = generateNumbers(defaultSize); // Call from common.js
+    createGrid(gridContainer, allNumbers); // Call from common.js
     totalDisplay.textContent = calculateTotal(allNumbers); 
 });
 
 selectionDisplay.textContent = "-";
 
 generateButton.addEventListener("click", function () {
-    const size = parseInt(gridSizeInput.value) || 0;
-    allNumbers = generateNumbers(size);
-    createGrid(allNumbers);
+    const size = (gridSizeInput.value * 1) || 0;
+    allNumbers = generateNumbers(size); // Call from common.js
+    createGrid(gridContainer, allNumbers); // Call from common.js
     totalDisplay.textContent = calculateTotal(allNumbers);
 });
 
@@ -38,32 +38,14 @@ gridContainer.addEventListener("click", function (event) {
     if (event.target.classList.contains("gridBox")) {
         if (event.target.classList.contains("selected")) {
             event.target.classList.remove("selected");
-            selectedSum -= parseInt(event.target.textContent);
+            selectedSum -= (event.target.textContent * 1);
         } else {
             event.target.classList.add("selected");
-            selectedSum += parseInt(event.target.textContent);
+            selectedSum += (event.target.textContent * 1);
         }
         selectionDisplay.textContent = selectedSum;
     }
 });
-
-function generateNumbers(count) {
-    const numbers = [];
-    for (let i = 0; i < count; i++) {
-        numbers.push(Math.floor(Math.random() * 101));
-    }
-    return numbers;
-}
-
-function createGrid(numbers) {
-    gridContainer.innerHTML = "";
-    for (let i = 0; i < numbers.length; i++) {
-        const box = document.createElement("div");
-        box.classList.add("gridBox");
-        box.textContent = numbers[i];
-        gridContainer.appendChild(box);
-    }
-}
 
 function calculateTotal(numbers) {
     let sum = 0;

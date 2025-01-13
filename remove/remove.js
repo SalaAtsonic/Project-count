@@ -8,28 +8,22 @@ const gridSizeInput = document.getElementById("gridSize");
 
 let randomNumber = null;
 
-// Function to create the grid
-function createGrid(gridSize) {
-    gridContainer.innerHTML = "";
-    for (let i = 0; i < gridSize; i++) {
-        const gridItem = document.createElement("div");
-        gridItem.classList.add("gridBox");
-        gridItem.textContent = Math.floor(Math.random() * 101);
-        gridContainer.appendChild(gridItem);
-    }
-    randomNumberDisplay.value = "-";
-    removeDisplay.value = "-";
-}
-
 // Initialize the grid on page load
 document.addEventListener("DOMContentLoaded", function () {
-    createGrid(parseInt(gridSizeInput.value) || 95);
+    const defaultSize = (gridSizeInput.value * 1) || 95; // Convert to number using * 1
+    const numbers = generateNumbers(defaultSize); // Call from common.js
+    createGrid(gridContainer, numbers); // Call from common.js
+    randomNumberDisplay.value = "-";
+    removeDisplay.value = "-";
 });
 
 // Generate a new grid when "Create" is clicked
 generateButton.addEventListener("click", function () {
-    const gridSize = parseInt(gridSizeInput.value) || 95;
-    createGrid(gridSize);
+    const gridSize = (gridSizeInput.value * 1) || 95; // Convert to number using * 1
+    const numbers = generateNumbers(gridSize); // Call from common.js
+    createGrid(gridContainer, numbers); // Call from common.js
+    randomNumberDisplay.value = "-";
+    removeDisplay.value = "-";
 });
 
 // Highlight numbers matching the random number
@@ -38,7 +32,7 @@ newRandomButton.addEventListener("click", function () {
     randomNumber = Math.floor(Math.random() * 101);
     randomNumberDisplay.value = randomNumber;
     for (let i = 0; i < gridItems.length; i++) {
-        if (parseInt(gridItems[i].textContent) === randomNumber) {
+        if ((gridItems[i].textContent * 1) === randomNumber) { // Convert text to number using * 1
             gridItems[i].classList.add("highlight");
         } else {
             gridItems[i].classList.remove("highlight");

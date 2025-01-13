@@ -7,7 +7,7 @@ homeButton.href = "../index.html";
 homeButton.classList.add("navLink");
 header.appendChild(homeButton);
 
-// Function to Generate Random Numbers
+// Function to generate random numbers
 function generateNumbers(count) {
     const numbers = [];
     for (let i = 0; i < count; i++) {
@@ -16,16 +16,15 @@ function generateNumbers(count) {
     return numbers;
 }
 
-// Function to Render the Grid
-function createGrid(numbers, containerId) {
-    const container = document.getElementById(containerId);
-    container.innerHTML = ""; 
-    numbers.forEach(function (num) {
-        const box = document.createElement("div");
-        box.classList.add("gridBox");
-        box.textContent = num;
-        container.appendChild(box);
-    });
+// Function to create the grid
+function createGrid(gridContainer, numbers) {
+    gridContainer.innerHTML = ""; // Clear existing grid
+    for (let i = 0; i < numbers.length; i++) {
+        const gridItem = document.createElement("div");
+        gridItem.classList.add("gridBox");
+        gridItem.textContent = numbers[i];
+        gridContainer.appendChild(gridItem);
+    }
 }
 
 // Calculate the Sum of an Array

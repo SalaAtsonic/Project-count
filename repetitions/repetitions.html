@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers: Repetitions</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="repetitions.css">
+</head>
+<body id="repSide">
+    <header></header>
+    <main>
+        <div id="controls">
+            <label for="gridSize">How many numbers in the grid?</label>
+            <input id="gridSize" type="text" value="100">
+            <button id="generateGrid">Create</button>
+        </div>
+        <div id="info">
+            <div class="infoBox">
+                <p>Most repeated number(s):</p>
+                <div id="repeatedNumbers" class="biggerBox">-</div>
+            </div>
+            <div class="infoBox">
+                <p>Number(s) not in place:</p>
+                <div id="missingNumbers" class="biggerBox">-</div>
+            </div>
+        </div>
+        <div id="gridContainer"></div>
+    </main>
+    <script src="../common.js"></script>
+    <script src="repetitions.js"></script>
+</body>
+</html>
