@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     totalDisplay.textContent = calculateTotal(allNumbers); 
 });
 
-selectionDisplay.textContent = "0";
+selectionDisplay.textContent = "-";
 
 generateButton.addEventListener("click", function () {
     const size = parseInt(gridSizeInput.value) || 0;
@@ -31,7 +31,7 @@ clearButton.addEventListener("click", function () {
         item.classList.remove("selected");
     });
     selectedSum = 0;
-    selectionDisplay.textContent = "0";
+    selectionDisplay.textContent = "-";
 });
 
 gridContainer.addEventListener("click", function (event) {
