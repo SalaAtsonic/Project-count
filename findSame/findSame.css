@@ -1,0 +1,42 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 10px;
+    margin: auto;
+    width: 90%;
+    padding-top: 20px;
+}
+
+.gridBox {
+    background-color: lightgray;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Responsive grid */
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; /* Center the grid container */
+}
+
+.gridBox:hover {
+    background-color: rgb(234, 229, 86);
+    cursor: pointer;
+}
+
+.same {
+    background-color: lightblue;
+}
+
+#box1, #box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px auto;
+}
