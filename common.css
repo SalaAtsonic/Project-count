@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'SourGummy';
+    src: url('./Sour_Gummy/SourGummy-Italic.ttf') format('woff');
+    font-style: italic;
+    font-weight: normal;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -9,6 +16,13 @@ header {
     justify-content: center;
     align-items: center;
     gap: 15px;
+}
+
+a {
+    font-family: 'SourGummy', sans-serif;
+    font-style: italic;
+    text-decoration: none; 
+    color: inherit; 
 }
 
 #navigationPanel {

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers:: Add Up To</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="addUpTo.css">
+</head>
+<body id="addSide">
+    <header></header>
+    <main>
+        <div class="input-section">
+            <label for="gridSize">How many numbers in the grid?</label>
+            <input type="text" id="gridSize" class="boxWithNumbers" value="95">
+            <button id="generateGrid">Create</button>
+        </div>
+        <div class="add-section">
+            <label for="choosenNumber">Add up to:</label>
+            <input type="text" id="choosenNumber" class="boxWithNumbers">
+            <button id="findNumbers">Find Two Cells That Add Up</button>
+        </div>
+        <div id="gridContainer" class="grid-container"></div>
+    </main>
+    <script src="../common.js"></script>
+    <script src="addUpTo.js"></script>
+</body>
+</html>

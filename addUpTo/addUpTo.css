@@ -1,0 +1,35 @@
+.input-section, .add-section {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.boxWithNumbers {
+    width: 80px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); 
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; 
+}
+
+.gridBox {
+    background-color: lightgray;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.gridBox:hover {
+    background-color: rgb(234, 229, 86);
+}
+
+.rightNumber {
+    background-color: lightblue;
+}

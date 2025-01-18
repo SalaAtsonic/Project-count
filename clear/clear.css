@@ -43,7 +43,3 @@
 .color:hover {
     background-color: rgb(152, 191, 204);
 }
-
-.color:active {
-    background-color: rgb(255, 48, 83);
-}
